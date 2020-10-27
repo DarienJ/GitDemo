@@ -1,4 +1,8 @@
-// Hola
+Enunciado :
 
-
-ahora esta actualizado
+Una venta de comidas ofrece a sus clientes perros y hamburguesas, 
+el precio del perro es de 9000 y el de la hamburguesa es de 12.000, 
+si desea una porción de papitas fritas incrementara 4.000, 
+calcule el total a pagar según lo que el cliente desee, 
+el sistema debe permitir ingresar el efectivo con el que paga el cliente 
+y realizar el calculo del cambio o vueltos.

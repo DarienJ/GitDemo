@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+    <!-- Darien Romero -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DarienJ</title>
+    <title>App Darien Romero</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <h1>Titulo</h1>
+      
+<div class="container" id="app">    
+    <p></p>
+    <div style="text-align: center;" class="group">
+        <h3><strong class="text-muted">Ventas por Darien Romero</strong></h3>
+      </div>
+    <div v-show="see==0" class="group">
+          <div class="row">
+              <div class="col-4"></div>
+              <div class="col-2">
+                  <label><strong>Hamburguesas</strong></label>
+              </div>
+              <div class="col-2">
+                  <input style="border-color: green;" v-model="nBurgers" type="number" class="form-control">
+              </div>
+          </div>
+          <p></p>
+          <div class="row">
+               <div class="col-4"></div>
+              <div class="col-2">
+                  <label><strong>Perros</strong></label>
+              </div>
+              <div class="col-2">
+                  <input style="border-color: green;" v-model="nDogs"  type="number" class="form-control">
+              </div>
+          </div>
+          <p></p>
+          <div class="row">
+              <div class="col-4"></div>
+              <div class="col-2">
+                  <label><strong>Porción de papas</strong></label>
+              </div>
+              <div class="col-2">
+                  <input style="border-color: green;" v-model="nchips"  type="number" class="form-control">
+              </div>
+          </div>
+          <p></p>
+          <div class="group">
+              <div class="row">
+                  <div class="col-4"></div>
+                  <div class="col-4">
+                      <button v-text="button1" v-on:click="process" type="button" class="btn btn-success btn-block">Enviar</button>
+                  </div>
+              </div>
+          </div>
+    </div>
+    <p></p>
+    <!-- Segunda parte -->
+    <div v-show="seeP==1" class="group">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-2">
+                <h4><strong class="text-muted">Debe pagar $</strong></h4>
+            </div>
+            <div class="col-auto">
+                <h4><strong v-text="price" class="text-muted">00000</strong></h4>
+            </div>
+            <div class="col-2">
+                <h4><strong class="text-muted">Pesos</strong></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-2">
+               <label><strong>Ingresa tu efectivo</strong></label>
+               <p></p>
+            </div>
+            <div class="col-2">
+                <input style="border-color: green;" v-model="pay" type="number" class="form-control">
+            </div>
+        </div>
+        <div class="group">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <button v-on:click="process2" type="button" class="btn btn-success btn-block">Pagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <!-- Tercera parte -->
+   <div v-show="seeS==1" class="group">
+    <div  class="row">
+        <div class="col-4"></div>
+        <div class="col-2">
+            <h4><strong class="text-muted">Sencillo de $</strong></h4>
+        </div>
+        <div class="col-auto">
+            <h4><strong v-text="rta" class="text-muted">00000</strong></h4>
+        </div>
+        <div class="col-2">
+            <h4><strong class="text-muted">Pesos</strong></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+         <div class="col-4">
+            <button v-on:click="process3" type="button" class="btn btn-success btn-block">Restablecer</button>
+         </div>
+    </div>
+   </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
